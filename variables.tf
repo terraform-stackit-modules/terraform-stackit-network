@@ -174,4 +174,13 @@ variable "security_group_rules" {
     condition     = alltrue([for r in var.security_group_rules : contains(["ingress", "egress"], r.direction)])
     error_message = "Each security_group_rule must have a direction of either \"ingress\" or \"egress\"."
   }
+
+  validation {
+    condition = alltrue([
+      for r in var.security_group_rules :
+      r.protocol == null || r.protocol.name == null ||
+      contains(["ah", "dccp", "egp", "esp", "gre", "icmp", "igmp", "ipip", "ipv6-encap", "ipv6-frag", "ipv6-icmp", "ipv6-nonxt", "ipv6-opts", "ipv6-route", "ospf", "pgm", "rsvp", "sctp", "tcp", "udp", "udplite", "vrrp"], r.protocol.name)
+    ])
+    error_message = "protocol.name must be lowercase and one of: ah, dccp, egp, esp, gre, icmp, igmp, ipip, ipv6-encap, ipv6-frag, ipv6-icmp, ipv6-nonxt, ipv6-opts, ipv6-route, ospf, pgm, rsvp, sctp, tcp, udp, udplite, vrrp."
+  }
 }
