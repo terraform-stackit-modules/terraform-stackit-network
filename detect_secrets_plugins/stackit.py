@@ -6,7 +6,7 @@ class StackitProjectIdDetector(RegexBasedDetector):
     """Detects STACKIT project IDs (UUID assigned to STACKIT_PROJECT_ID)."""
 
     name = "StackitProjectIdDetector"
-    secret_type = "STACKIT Project ID"
+    secret_type = "STACKIT Project ID"  # pragma: allowlist secret
 
     denylist = [
         re.compile(
@@ -21,9 +21,9 @@ class StackitServiceAccountKeyDetector(RegexBasedDetector):
     """Detects STACKIT service account keys (JSON with privateKey field)."""
 
     name = "StackitServiceAccountKeyDetector"
-    secret_type = "STACKIT Service Account Key"
+    secret_type = "STACKIT Service Account Key"  # pragma: allowlist secret
 
     denylist = [
-        re.compile(r'"privateKey"\s*:\s*"-----BEGIN [A-Z ]*KEY-----'),
-        re.compile(r'"projectId"\s*:\s*"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"'),
+        re.compile(r'"privateKey"\s*:\s*"-----BEGIN [A-Z ]*KEY-----'),  # pragma: allowlist secret
+        re.compile(r'"projectId"\s*:\s*"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"'),  # pragma: allowlist secret
     ]
