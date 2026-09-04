@@ -10,7 +10,7 @@ module "network" {
 
   project_id  = var.project_id
   name        = "my-network"
-  ipv4_prefix = "192.168.0.0/24"
+  ipv4_prefix = "10.10.100.0/24"
 }
 
 # With security group and rules
@@ -19,7 +19,7 @@ module "network_with_sg" {
 
   project_id  = var.project_id
   name        = "my-network-with-sg"
-  ipv4_prefix = "10.0.1.0/24"
+  ipv4_prefix = "10.10.101.0/24"
 
   create_security_group      = true
   security_group_description = "Allow HTTPS and all egress"
@@ -29,14 +29,14 @@ module "network_with_sg" {
       direction  = "ingress"
       ether_type = "IPv4"
       ip_range   = "0.0.0.0/0"
-      protocol   = { name = "TCP" }
+      protocol   = { name = "tcp" }
       port_range = { min = 443, max = 443 }
     },
     {
       direction  = "egress"
       ether_type = "IPv4"
       ip_range   = "0.0.0.0/0"
-      protocol   = { name = "TCP" }
+      protocol   = { name = "tcp" }
     },
   ]
 }

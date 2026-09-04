@@ -58,3 +58,8 @@ builds/
 __pycache__/
 *.zip
 .tox
+
+# Local environment and Go test files
+.env
+test/go.mod
+test/go.sum
