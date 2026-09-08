@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.2](https://github.com/terraform-stackit-modules/terraform-stackit-network/compare/v1.0.1...v1.0.2) (2026-09-08)
+
+### Bug Fixes
+
+* guard security group rule protocol validation with try() ([b7c18c2](https://github.com/terraform-stackit-modules/terraform-stackit-network/commit/b7c18c25a5f0a4a011f0afd14f29051d85f02c93))
+
 ## [1.0.1](https://github.com/terraform-stackit-modules/terraform-stackit-network/compare/v1.0.0...v1.0.1) (2026-09-04)
 
 ### Bug Fixes
