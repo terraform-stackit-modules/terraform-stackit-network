@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.1](https://github.com/terraform-stackit-modules/terraform-stackit-network/compare/v1.0.0...v1.0.1) (2026-09-04)
+
+### Bug Fixes
+
+* add validation on protocol.name to enforce lowercase values required by STACKIT API ([e727e09](https://github.com/terraform-stackit-modules/terraform-stackit-network/commit/e727e097c2f64c176537638132fffcf2332416fe))
+
 ## 1.0.0 (2026-09-01)
 
 ### Features
