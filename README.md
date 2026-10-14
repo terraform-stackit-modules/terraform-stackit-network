@@ -6,7 +6,7 @@ Terraform module which creates a [STACKIT network](https://registry.terraform.io
 Designed for use with STACKIT virtual machines and managed databases.
 
 [![Terraform Registry](https://img.shields.io/github/v/release/terraform-stackit-modules/terraform-stackit-network?label=registry&color=7B42BC&logo=terraform&logoColor=white&style=flat)](https://registry.terraform.io/modules/terraform-stackit-modules/network/stackit/latest)
-[![OpenTofu Registry](https://img.shields.io/badge/OpenTofu-Registry-FF643B?style=flat&logo=opentofu&logoColor=white)](https://registry.opentofu.org/modules/terraform-stackit-modules/network/stackit/latest)
+[![OpenTofu Registry](https://img.shields.io/badge/OpenTofu-Registry-FF643B?style=flat&logo=opentofu&logoColor=white)](https://search.opentofu.org/module/terraform-stackit-modules/network/stackit/latest)
 [![License](https://img.shields.io/github/license/terraform-stackit-modules/terraform-stackit-network)](./LICENSE)
 
 This repository is not from the official STACKIT organization.
